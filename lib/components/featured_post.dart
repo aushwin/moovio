@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moovio/brains/fetchTopBrain.dart';
 
 class FeaturedPost extends StatelessWidget {
   const FeaturedPost({
@@ -90,7 +91,10 @@ class FeaturedPost extends StatelessWidget {
               )),
               child: FlatButton(
                 color: Colors.red,
-                onPressed: () {},
+                onPressed: () async {
+                  FetchTopBrain fetchTopBrain = new FetchTopBrain();
+                  fetchTopBrain.fetchPopularMovie();
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
