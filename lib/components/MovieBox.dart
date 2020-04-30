@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MovieBox extends StatelessWidget {
-  const MovieBox({
-    Key key,
-  }) : super(key: key);
+  MovieBox({this.url, this.title});
+  final url, title;
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +17,19 @@ class MovieBox extends StatelessWidget {
                 topRight: Radius.circular(20),
               ),
               child: Image.asset(
-                'images/WWZ.jpg',
+                url,
                 fit: BoxFit.fill,
+                height: 160,
               ),
             ),
             Container(
               color: Colors.white,
               child: Center(
                 child: Text(
-                  'World War Z',
+                  title,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 18,
                   ),
                 ),
               ),

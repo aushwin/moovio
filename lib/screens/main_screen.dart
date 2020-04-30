@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:moovio/components/MovieBox.dart';
 import 'package:moovio/components/featured_post.dart';
+import 'package:moovio/components/navBarBottom.dart';
+
+int currentIndex = 0;
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key key}) : super(key: key);
@@ -13,6 +16,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: ButtomNavBar(),
       body: Column(
         children: [
           FeaturedPost(),
@@ -57,10 +61,26 @@ class _MainScreenState extends State<MainScreen> {
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
                       children: [
-                        MovieBox(),
-                        MovieBox(),
-                        MovieBox(),
-                        MovieBox(),
+                        MovieBox(
+                          url: 'images/WWZ.jpg',
+                          title: 'World War Z',
+                        ),
+                        MovieBox(
+                          url: 'images/FC.jpg',
+                          title: 'Fight Club',
+                        ),
+                        MovieBox(
+                          url: 'images/AOJD.jpg',
+                          title: 'Autopsy Of Jain Doe',
+                        ),
+                        MovieBox(
+                          url: 'images/TDF.jpg',
+                          title: 'Terminator Dark Fate',
+                        ),
+                        MovieBox(
+                          url: 'images/ML.jpg',
+                          title: 'Movie Light',
+                        ),
                       ],
                     ),
                   ),

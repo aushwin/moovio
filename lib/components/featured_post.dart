@@ -17,6 +17,10 @@ class FeaturedPost extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.blue,
+              image: DecorationImage(
+                image: AssetImage('images/JHONWICK.jpg'),
+                fit: BoxFit.cover,
+              ),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(120),
               ),
@@ -41,7 +45,7 @@ class FeaturedPost extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      'The Punisher',
+                      'The Boogy Man',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
@@ -56,7 +60,7 @@ class FeaturedPost extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.43,
+            top: MediaQuery.of(context).size.height * 0.39,
             left: MediaQuery.of(context).size.width * 0.3,
             child: FlatButton(
               splashColor: Colors.redAccent,
@@ -74,7 +78,7 @@ class FeaturedPost extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.43,
+            top: MediaQuery.of(context).size.height * 0.39,
             left: MediaQuery.of(context).size.width * 0.5,
             child: ButtonTheme(
               minWidth: 200,
