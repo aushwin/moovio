@@ -58,6 +58,9 @@ class _MainScreenState extends State<MainScreen> {
                       shrinkWrap: true,
                       children: [
                         MovieBox(),
+                        MovieBox(),
+                        MovieBox(),
+                        MovieBox(),
                       ],
                     ),
                   ),
