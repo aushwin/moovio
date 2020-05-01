@@ -27,4 +27,8 @@ class FetchTopBrain {
   String getTitle(int i) {
     return titleMovie[i];
   }
+
+  String getImageUrl(int i) {
+    return imageUrl[i];
+  }
 }

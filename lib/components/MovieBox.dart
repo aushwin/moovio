@@ -16,7 +16,7 @@ class MovieBox extends StatelessWidget {
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               ),
-              child: Image.asset(
+              child: Image.network(
                 url,
                 fit: BoxFit.fill,
                 height: 160,
@@ -29,7 +29,7 @@ class MovieBox extends StatelessWidget {
                   title,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
               ),

@@ -3,6 +3,7 @@ import 'package:moovio/brains/fetchTopBrain.dart';
 import 'package:moovio/components/MovieBox.dart';
 import 'package:moovio/components/featured_post.dart';
 import 'package:moovio/components/navBarBottom.dart';
+import 'package:moovio/constants.dart';
 import 'package:moovio/screens/loading_screen.dart';
 
 int currentIndex = 0;
@@ -61,31 +62,31 @@ class _MainScreenState extends State<MainScreen> {
                     ],
                   ),
                   Container(
-                    height: 210,
+                    height: 200,
                     margin: EdgeInsets.all(20),
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
                       children: [
                         MovieBox(
-                          url: 'images/WWZ.jpg',
+                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(0),
                           title: fetchTopBrain.getTitle(0),
                         ),
                         MovieBox(
-                          url: 'images/FC.jpg',
-                          title: 'Fight Club',
+                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(1),
+                          title: fetchTopBrain.getTitle(1),
                         ),
                         MovieBox(
-                          url: 'images/AOJD.jpg',
-                          title: 'Autopsy Of Jain Doe',
+                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(2),
+                          title: fetchTopBrain.getTitle(2),
                         ),
                         MovieBox(
-                          url: 'images/TDF.jpg',
-                          title: 'Terminator Dark Fate',
+                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(3),
+                          title: fetchTopBrain.getTitle(3),
                         ),
                         MovieBox(
-                          url: 'images/ML.jpg',
-                          title: 'Movie Light',
+                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(4),
+                          title: fetchTopBrain.getTitle(4),
                         ),
                       ],
                     ),
