@@ -10,6 +10,7 @@ class FetchTopBrain {
   var resultList4;
   List<String> titleMovie = new List();
   List<String> imageUrl = new List();
+  List<String> idMovie = new List();
   Future<void> fetchPopularMovie() async {
     final response1 = await http.get(
       kGETPOPULARURL + 'api_key=$kAPIKEY&language=en-US&page=1',
@@ -38,18 +39,24 @@ class FetchTopBrain {
     for (int i = 0; i < 20; i++) {
       titleMovie.add(resultList[i]['original_title']);
       imageUrl.add(resultList[i]['poster_path']);
+      idMovie.add(resultList[i]['id'].toString());
     }
     for (int i = 0; i < 20; i++) {
       titleMovie.add(resultList2[i]['original_title']);
       imageUrl.add(resultList2[i]['poster_path']);
+      idMovie.add(resultList2[i]['id'].toString());
     }
+
+    
     for (int i = 0; i < 20; i++) {
       titleMovie.add(resultList3[i]['original_title']);
       imageUrl.add(resultList3[i]['poster_path']);
+      idMovie.add(resultList3[i]['id'].toString());
     }
     for (int i = 0; i < 20; i++) {
       titleMovie.add(resultList4[i]['original_title']);
       imageUrl.add(resultList4[i]['poster_path']);
+      idMovie.add(resultList4[i]['id'].toString());
     }
     print(titleMovie);
     print(imageUrl);
