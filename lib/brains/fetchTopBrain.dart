@@ -7,7 +7,7 @@ class FetchTopBrain {
   var resultList;
   List<String> titleMovie = new List();
   List<String> imageUrl = new List();
-  void fetchPopularMovie() async {
+  Future<void> fetchPopularMovie() async {
     final response = await http.get(
       kGETPOPULARURL + 'api_key=$kAPIKEY&language=en-US&page=1',
       headers: {"Content-Type": "application/json"},
@@ -22,5 +22,9 @@ class FetchTopBrain {
     }
     print(titleMovie);
     print(imageUrl);
+  }
+
+  String getTitle(int i) {
+    return titleMovie[i];
   }
 }

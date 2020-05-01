@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:moovio/brains/fetchTopBrain.dart';
 import 'package:moovio/components/MovieBox.dart';
 import 'package:moovio/components/featured_post.dart';
 import 'package:moovio/components/navBarBottom.dart';
+import 'package:moovio/screens/loading_screen.dart';
 
 int currentIndex = 0;
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key key}) : super(key: key);
-
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +69,7 @@ class _MainScreenState extends State<MainScreen> {
                       children: [
                         MovieBox(
                           url: 'images/WWZ.jpg',
-                          title: 'World War Z',
+                          title: fetchTopBrain.getTitle(0),
                         ),
                         MovieBox(
                           url: 'images/FC.jpg',
