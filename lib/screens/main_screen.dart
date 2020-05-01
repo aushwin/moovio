@@ -5,6 +5,7 @@ import 'package:moovio/components/featured_post.dart';
 import 'package:moovio/components/navBarBottom.dart';
 import 'package:moovio/constants.dart';
 import 'package:moovio/screens/loading_screen.dart';
+import 'package:moovio/screens/view_screen.dart';
 
 int currentIndex = 0;
 
@@ -27,75 +28,92 @@ class _MainScreenState extends State<MainScreen> {
       body: Column(
         children: [
           FeaturedPost(),
-          Expanded(
-            flex: 7,
-            child: Container(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 70,
+          SectionOne(),
+        ],
+      ),
+    );
+  }
+}
+
+class SectionOne extends StatelessWidget {
+  const SectionOne({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 7,
+      child: Container(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 70,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.baseline,
+              textBaseline: TextBaseline.ideographic,
+              children: [
+                Spacer(
+                  flex: 3,
+                ),
+                Text(
+                  'Watch Now',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    textBaseline: TextBaseline.ideographic,
-                    children: [
-                      Spacer(
-                        flex: 3,
-                      ),
-                      Text(
-                        'Watch Now',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Spacer(
-                        flex: 2,
-                      ),
-                      Text(
-                        'View More',
-                        style: TextStyle(
-                          color: Color(0xffADADAD),
-                        ),
-                      ),
-                      Spacer(),
-                    ],
-                  ),
-                  Container(
-                    height: 200,
-                    margin: EdgeInsets.all(20),
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      shrinkWrap: true,
-                      children: [
-                        MovieBox(
-                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(0),
-                          title: fetchTopBrain.getTitle(0),
-                        ),
-                        MovieBox(
-                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(1),
-                          title: fetchTopBrain.getTitle(1),
-                        ),
-                        MovieBox(
-                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(2),
-                          title: fetchTopBrain.getTitle(2),
-                        ),
-                        MovieBox(
-                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(3),
-                          title: fetchTopBrain.getTitle(3),
-                        ),
-                        MovieBox(
-                          url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(4),
-                          title: fetchTopBrain.getTitle(4),
-                        ),
-                      ],
+                ),
+                Spacer(
+                  flex: 2,
+                ),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => ViewMoreScreen())),
+                  child: Text(
+                    'View More',
+                    style: TextStyle(
+                      color: Color(0xffADADAD),
                     ),
+                  ),
+                ),
+                Spacer(),
+              ],
+            ),
+            Container(
+              height: 200,
+              margin: EdgeInsets.all(20),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                children: [
+                  MovieBox(
+                    url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(0),
+                    title: fetchTopBrain.getTitle(0),
+                  ),
+                  MovieBox(
+                    url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(1),
+                    title: fetchTopBrain.getTitle(1),
+                  ),
+                  MovieBox(
+                    url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(2),
+                    title: fetchTopBrain.getTitle(2),
+                  ),
+                  MovieBox(
+                    url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(3),
+                    title: fetchTopBrain.getTitle(3),
+                  ),
+                  MovieBox(
+                    url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(4),
+                    title: fetchTopBrain.getTitle(4),
                   ),
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
