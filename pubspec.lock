@@ -116,13 +116,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.0"
-  share:
-    dependency: transitive
-    description:
-      name: share
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.4"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -184,13 +177,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.8"
-  youtube_player:
-    dependency: "direct main"
+  webview_media:
+    dependency: transitive
     description:
-      name: youtube_player
+      name: webview_media
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.5.0"
+    version: "0.1.2"
+  youtube_player_flutter:
+    dependency: "direct main"
+    description:
+      name: youtube_player_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.1.0+7"
 sdks:
   dart: ">=2.7.0 <3.0.0"
   flutter: ">=1.12.13+hotfix.5 <2.0.0"

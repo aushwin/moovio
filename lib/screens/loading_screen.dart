@@ -22,9 +22,10 @@ class _LoadinScreenState extends State<LoadingScreen> {
 
   Future<void> fetchData() async {
     await fetchTopBrain.fetchPopularMovie();
+
     Future.delayed(
         Duration(
-          seconds: 2,
+          seconds: 3,
         ), () {
       Navigator.push(context,
           MaterialPageRoute(builder: (BuildContext context) => MainScreen()));

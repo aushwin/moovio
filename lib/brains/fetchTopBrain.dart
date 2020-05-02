@@ -8,9 +8,13 @@ class FetchTopBrain {
   var resultList2;
   var resultList3;
   var resultList4;
+  var resLink;
+  var youtubelink = List();
+  http.Response responseLink;
   List<String> titleMovie = new List();
   List<String> imageUrl = new List();
   List<String> idMovie = new List();
+  List<String> resultLink = new List();
   Future<void> fetchPopularMovie() async {
     final response1 = await http.get(
       kGETPOPULARURL + 'api_key=$kAPIKEY&language=en-US&page=1',
@@ -47,7 +51,6 @@ class FetchTopBrain {
       idMovie.add(resultList2[i]['id'].toString());
     }
 
-    
     for (int i = 0; i < 20; i++) {
       titleMovie.add(resultList3[i]['original_title']);
       imageUrl.add(resultList3[i]['poster_path']);
@@ -58,8 +61,9 @@ class FetchTopBrain {
       imageUrl.add(resultList4[i]['poster_path']);
       idMovie.add(resultList4[i]['id'].toString());
     }
-    print(titleMovie);
-    print(imageUrl);
+    //print(titleMovie);
+    //print(imageUrl);
+    print(idMovie.length);
   }
 
   String getTitle(int i) {
@@ -68,5 +72,47 @@ class FetchTopBrain {
 
   String getImageUrl(int i) {
     return imageUrl[i];
+  }
+
+  String getId(int i) {
+    return idMovie[i];
+  }
+
+  String getYoutubeLink(int i) {
+    return youtubelink[i];
+  }
+
+  Future fetchYoutubeLinks(int i) async {
+    try {
+      responseLink = await http.get(
+        'http://api.themoviedb.org/3/movie/${idMovie[i]}/videos?api_key=8ceab0d4ef0a70c1187207197a12621e&language=en-US',
+        headers: {"Content-Type": "application/json"},
+      );
+      resLink = (jsonDecode(responseLink.body)['results']);
+      //resultLink.add(resLink[0]['key'].toString());
+      youtubelink.add(resLink[0]['key'].toString());
+      print('added');
+    } catch (e) {
+      youtubelink.add('2U76x2fD_tE');
+      print('added default ');
+      //print('not found $e');
+    }
+  }
+
+  static String s;
+  Future getLinkWithId(String id) async {
+    try {
+      responseLink = await http.get(
+        'http://api.themoviedb.org/3/movie/${id}/videos?api_key=8ceab0d4ef0a70c1187207197a12621e&language=en-US',
+        headers: {"Content-Type": "application/json"},
+      );
+      resLink = (jsonDecode(responseLink.body)['results']);
+      //resultLink.add(resLink[0]['key'].toString());
+      s = resLink[0]['key'].toString();
+    } catch (e) {
+      s = '2U76x2fD_tE';
+
+      //print('not found $e');
+    }
   }
 }

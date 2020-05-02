@@ -1,15 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:moovio/brains/fetchTopBrain.dart';
+import 'package:moovio/screens/loading_screen.dart';
 import 'package:moovio/screens/movie_details.dart';
 
-class MovieBox extends StatelessWidget {
-  MovieBox({this.url, this.title});
-  final url, title;
+class MovieBox extends StatefulWidget {
+  MovieBox({this.url, this.title, this.id});
+  final url, title, id;
 
+  @override
+  _MovieBoxState createState() => _MovieBoxState();
+}
+
+class _MovieBoxState extends State<MovieBox> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.push(context,
-          MaterialPageRoute(builder: (BuildContext context) => MovieDetails())),
+      onTap: () async {
+        fetchTopBrain.getLinkWithId(widget.id);
+        print(FetchTopBrain.s);
+        Future.delayed(Duration(seconds: 2), () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) =>
+                  MovieDetails(link: FetchTopBrain.s),
+            ),
+          );
+        });
+      },
       child: Container(
         width: 120,
         child: Card(
@@ -21,7 +39,7 @@ class MovieBox extends StatelessWidget {
                   topRight: Radius.circular(20),
                 ),
                 child: Image.network(
-                  url,
+                  widget.url,
                   fit: BoxFit.fill,
                   height: 160,
                 ),
@@ -30,7 +48,7 @@ class MovieBox extends StatelessWidget {
                 color: Colors.white,
                 child: Center(
                   child: Text(
-                    title,
+                    widget.title,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,

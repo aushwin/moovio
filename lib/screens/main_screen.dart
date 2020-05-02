@@ -92,22 +92,27 @@ class SectionOne extends StatelessWidget {
                   MovieBox(
                     url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(0),
                     title: fetchTopBrain.getTitle(0),
+                    id: fetchTopBrain.getId(0),
                   ),
                   MovieBox(
                     url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(1),
                     title: fetchTopBrain.getTitle(1),
+                    id: fetchTopBrain.getId(1),
                   ),
                   MovieBox(
                     url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(2),
                     title: fetchTopBrain.getTitle(2),
+                    id: fetchTopBrain.getId(2),
                   ),
                   MovieBox(
                     url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(3),
                     title: fetchTopBrain.getTitle(3),
+                    id: fetchTopBrain.getId(3),
                   ),
                   MovieBox(
                     url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(4),
                     title: fetchTopBrain.getTitle(4),
+                    id: fetchTopBrain.getId(4),
                   ),
                 ],
               ),
