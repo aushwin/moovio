@@ -4,8 +4,8 @@ import 'package:moovio/screens/loading_screen.dart';
 import 'package:moovio/screens/movie_details.dart';
 
 class MovieBox extends StatefulWidget {
-  MovieBox({this.url, this.title, this.id});
-  final url, title, id;
+  MovieBox({this.url, this.title, this.id, this.desc});
+  final url, title, id, desc;
 
   @override
   _MovieBoxState createState() => _MovieBoxState();
@@ -18,12 +18,14 @@ class _MovieBoxState extends State<MovieBox> {
       onTap: () async {
         fetchTopBrain.getLinkWithId(widget.id);
         print(FetchTopBrain.s);
-        Future.delayed(Duration(seconds: 2), () {
+        Future.delayed(Duration(milliseconds: 500), () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (BuildContext context) =>
-                  MovieDetails(link: FetchTopBrain.s),
+              builder: (BuildContext context) => MovieDetails(
+                  link: FetchTopBrain.s,
+                  desc: widget.desc,
+                  title: widget.title),
             ),
           );
         });

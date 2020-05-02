@@ -1,0 +1,94 @@
+Date : 2020-05-02 11:22:45
+Directory : d:\Code\Android\week3\moovio
+Total : 35 files,  1567 codes, 105 comments, 134 blanks, all 1806 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         11 |        736 |         11 |         61 |        808 |
+| XML        |          8 |        454 |         40 |         14 |        508 |
+| JSON       |          3 |        213 |          0 |          3 |        216 |
+| Groovy     |          3 |         84 |          6 |         22 |        112 |
+| Swift      |          4 |         36 |          3 |         12 |         51 |
+| YAML       |          1 |         21 |         44 |         10 |         75 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Properties |          2 |          9 |          1 |          2 |         12 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                       | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                          |         35 |      1,567 |        105 |        134 |      1,806 |
+| android                                                                                    |         10 |        147 |         45 |         35 |        227 |
+| android\app                                                                                |          6 |        103 |         41 |         23 |        167 |
+| android\app\src                                                                            |          5 |         54 |         38 |         11 |        103 |
+| android\app\src\debug                                                                      |          1 |          4 |          3 |          1 |          8 |
+| android\app\src\main                                                                       |          3 |         46 |         32 |          9 |         87 |
+| android\app\src\main\res                                                                   |          2 |         13 |         16 |          3 |         32 |
+| android\app\src\main\res\drawable                                                          |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                            |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                    |          1 |          4 |          3 |          1 |          8 |
+| android\gradle                                                                             |          1 |          5 |          1 |          1 |          7 |
+| android\gradle\wrapper                                                                     |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                        |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner                                                                                 |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner\Assets.xcassets                                                                 |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                              |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                            |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                      |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                        |         11 |        736 |         11 |         61 |        808 |
+| lib\brains                                                                                 |          1 |        107 |          7 |         14 |        128 |
+| lib\components                                                                             |          4 |        292 |          0 |         15 |        307 |
+| lib\screens                                                                                |          4 |        327 |          4 |         29 |        360 |
+| macos                                                                                      |          5 |        431 |          3 |         12 |        446 |
+| macos\Flutter                                                                              |          1 |          4 |          3 |          4 |         11 |
+| macos\Runner                                                                               |          4 |        427 |          0 |          8 |        435 |
+| macos\Runner\Assets.xcassets                                                               |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Assets.xcassets\AppIcon.appiconset                                            |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Base.lproj                                                                    |          1 |        339 |          0 |          1 |        340 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                   | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\Code\Android\week3\moovio\README.md                                                     | Markdown   |         10 |          0 |          7 |         17 |
+| d:\Code\Android\week3\moovio\android\app\build.gradle                                      | Groovy     |         49 |          3 |         12 |         64 |
+| d:\Code\Android\week3\moovio\android\app\src\debug\AndroidManifest.xml                     | XML        |          4 |          3 |          1 |          8 |
+| d:\Code\Android\week3\moovio\android\app\src\main\AndroidManifest.xml                      | XML        |         33 |         16 |          6 |         55 |
+| d:\Code\Android\week3\moovio\android\app\src\main\res\drawable\launch_background.xml       | XML        |          4 |          7 |          2 |         13 |
+| d:\Code\Android\week3\moovio\android\app\src\main\res\values\styles.xml                    | XML        |          9 |          9 |          1 |         19 |
+| d:\Code\Android\week3\moovio\android\app\src\profile\AndroidManifest.xml                   | XML        |          4 |          3 |          1 |          8 |
+| d:\Code\Android\week3\moovio\android\build.gradle                                          | Groovy     |         27 |          0 |          5 |         32 |
+| d:\Code\Android\week3\moovio\android\gradle.properties                                     | Properties |          4 |          0 |          1 |          5 |
+| d:\Code\Android\week3\moovio\android\gradle\wrapper\gradle-wrapper.properties              | Properties |          5 |          1 |          1 |          7 |
+| d:\Code\Android\week3\moovio\android\settings.gradle                                       | Groovy     |          8 |          3 |          5 |         16 |
+| d:\Code\Android\week3\moovio\ios\Runner\AppDelegate.swift                                  | Swift      |         12 |          0 |          2 |         14 |
+| d:\Code\Android\week3\moovio\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON       |        122 |          0 |          1 |        123 |
+| d:\Code\Android\week3\moovio\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json | JSON       |         23 |          0 |          1 |         24 |
+| d:\Code\Android\week3\moovio\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md     | Markdown   |          3 |          0 |          2 |          5 |
+| d:\Code\Android\week3\moovio\ios\Runner\Base.lproj\LaunchScreen.storyboard                 | XML        |         36 |          1 |          1 |         38 |
+| d:\Code\Android\week3\moovio\ios\Runner\Base.lproj\Main.storyboard                         | XML        |         25 |          1 |          1 |         27 |
+| d:\Code\Android\week3\moovio\ios\Runner\Runner-Bridging-Header.h                           | C++        |          1 |          0 |          1 |          2 |
+| d:\Code\Android\week3\moovio\lib\brains\fetchTopBrain.dart                                 | Dart       |        107 |          7 |         14 |        128 |
+| d:\Code\Android\week3\moovio\lib\components\MovieBox.dart                                  | Dart       |         64 |          0 |          4 |         68 |
+| d:\Code\Android\week3\moovio\lib\components\MovieBoxView.dart                              | Dart       |         39 |          0 |          4 |         43 |
+| d:\Code\Android\week3\moovio\lib\components\featured_post.dart                             | Dart       |        120 |          0 |          3 |        123 |
+| d:\Code\Android\week3\moovio\lib\components\navBarBottom.dart                              | Dart       |         69 |          0 |          4 |         73 |
+| d:\Code\Android\week3\moovio\lib\constants.dart                                            | Dart       |          3 |          0 |          1 |          4 |
+| d:\Code\Android\week3\moovio\lib\main.dart                                                 | Dart       |          7 |          0 |          2 |          9 |
+| d:\Code\Android\week3\moovio\lib\screens\loading_screen.dart                               | Dart       |         53 |          1 |          8 |         62 |
+| d:\Code\Android\week3\moovio\lib\screens\main_screen.dart                                  | Dart       |        123 |          1 |          7 |        131 |
+| d:\Code\Android\week3\moovio\lib\screens\movie_details.dart                                | Dart       |         92 |          0 |          5 |         97 |
+| d:\Code\Android\week3\moovio\lib\screens\view_screen.dart                                  | Dart       |         59 |          2 |          9 |         70 |
+| d:\Code\Android\week3\moovio\macos\Flutter\GeneratedPluginRegistrant.swift                 | Swift      |          4 |          3 |          4 |         11 |
+| d:\Code\Android\week3\moovio\macos\Runner\AppDelegate.swift                                | Swift      |          8 |          0 |          2 |         10 |
+| d:\Code\Android\week3\moovio\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json | JSON       |         68 |          0 |          1 |         69 |
+| d:\Code\Android\week3\moovio\macos\Runner\Base.lproj\MainMenu.xib                          | XML        |        339 |          0 |          1 |        340 |
+| d:\Code\Android\week3\moovio\macos\Runner\MainFlutterWindow.swift                          | Swift      |         12 |          0 |          4 |         16 |
+| d:\Code\Android\week3\moovio\pubspec.yaml                                                  | YAML       |         21 |         44 |         10 |         75 |
+| Total                                                                                      |            |      1,567 |        105 |        134 |      1,806 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

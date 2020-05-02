@@ -58,6 +58,8 @@ class _ViewMoreScreenState extends State<ViewMoreScreen> {
             return MovieBoxView(
               url: kIMAGEDATABASEURL + fetchTopBrain.getImageUrl(index),
               title: fetchTopBrain.getTitle(index),
+              id: fetchTopBrain.getId(index),
+              desc: fetchTopBrain.getdesc(index),
             );
           },
         ),
